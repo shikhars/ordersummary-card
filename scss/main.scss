@@ -1,0 +1,148 @@
+@use 'resets';
+
+$primarypb: hsl(225, 100%, 94%);
+$primarybb: hsl(245, 75%, 52%);
+$neutralvpb: hsl(225, 100%, 98%);
+$neutraldsb: hsl(224, 23%, 55%);
+$neutraldb: hsl(223, 47%, 23%);
+
+$fsp: 1rem;
+
+$ff-redhd: 'Red Hat Display', sans-serif;
+
+$fw500: 500;
+$fw700: 700;
+$fw900: 900;
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: 0 -7rem;
+    background-color: $primarypb;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 22%;
+        min-width: 22rem;
+        height: 32rem;
+        border-radius: 1rem;
+        background-color: white;
+        overflow: hidden;
+
+        .image {
+            background-image: url(../images/illustration-hero.svg);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 14rem;
+        }
+        
+        .content {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            padding: 2rem;
+
+            .order-summary {
+                font-family: $ff-redhd;
+                font-size: 1.5rem;
+                font-weight: 900;
+                text-align: center;
+            }
+            
+            .para {
+                font-family: $ff-redhd;
+                font-size: $fsp;
+                font-weight: 500;
+                text-align: center;
+                opacity: 0.6;
+            }
+            
+            .plan {
+                display: flex;
+                flex-direction: row;
+                gap: 4rem;
+                background-color: hsl(225, 100%, 95%);
+                padding: 0.5rem;
+                align-items: center;
+                border-radius: 0.7rem;
+                opacity: 0.8;
+
+                .wrapper {
+                    display: flex;
+                    gap: 1rem;
+
+                    .annual-plan {
+                        display: flex;
+                        flex-direction: column;
+                        column-gap: 1rem;
+
+                        .annual {
+                            font-family: $ff-redhd;
+                            font-weight: 700;
+                        }
+                        
+                        .price {
+                            color: grey;
+                            font-family: $ff-redhd;
+                            font-weight: 500;
+                        }
+                    }
+                }
+
+                .change {
+                    font-family: $ff-redhd;
+                    font-size: 0.8rem;
+                    font-weight: 500;
+                    color: $primarybb;
+                    text-align: end;
+                    opacity: 1;
+                }
+
+                .change:hover {
+                    opacity: 0.7;
+                    text-decoration: none;
+                }
+            }
+
+            .btn {
+                width: 100%;
+                height: auto;
+                background-color: $primarybb;
+                color: white;
+                font-family: $ff-redhd;
+                font-weight: 700;
+                padding: 0.5rem;
+                border: none;
+                border-radius: 0.7rem;
+                opacity: 1;
+                box-shadow: 0 5px 20px hsl(228, 45%, 61%);
+            }
+
+            .btn:hover {
+                opacity: 0.7;
+                cursor: pointer;
+            }
+
+            .cancel {
+                color: black;
+                font-family: $ff-redhd;
+                font-weight: 700;
+                font-size: 1rem;
+                text-align: center;
+                text-decoration: none;
+                opacity: 0.5;
+            }
+
+            .cancel:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
