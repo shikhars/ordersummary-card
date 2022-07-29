@@ -20,7 +20,7 @@ $fw900: 900;
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-image: url(/images/pattern-background-desktop.svg);
+    background-image: url(./images/pattern-background-desktop.svg);
     background-repeat: no-repeat;
     background-position: 0 -7rem;
     background-color: $primarypb;
@@ -36,7 +36,7 @@ $fw900: 900;
         overflow: hidden;
 
         .image {
-            background-image: url(/images/illustration-hero.svg);
+            background-image: url(./images/illustration-hero.svg);
             background-size: cover;
             background-position: center;
             width: 100%;
